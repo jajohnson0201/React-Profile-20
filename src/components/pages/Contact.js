@@ -1,13 +1,3 @@
-import React from "react";
-
-export default function Contact (){
-    return (
-        <div>
-            <h1>COMING SOON</h1>
-        </div>
-    );
-}
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -25,13 +15,13 @@ export default function Contact() {
       <div>
         <TextField
           id="outlined-multiline-flexible"
-          label="Name"
+          label="Name:"
           multiline
           maxRows={4}
         />
         <TextField
           id="outlined-textarea"
-          label="Email"
+          label="Email:"
           placeholder="Placeholder"
           multiline
         />
@@ -40,7 +30,7 @@ export default function Contact() {
           label="Descriptive Message:"
           multiline
           rows={4}
-          defaultValue="Default Value"
+          defaultValue="Enter Here:"
         />
       </div>
     </Box>

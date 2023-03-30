@@ -1,43 +1,49 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 
-export default function Nav({ currentPage, handlePageChange}) {
+export default function Nav({ currentPage, handlePageChange }) {
     return (
         <div>
-            <ul className='nav nav-tabs'>
-                <li className='nav-item'>
-                    <a 
+            <ButtonGroup variant="contained" aria-label="outlined primary button group">
+
+                <Button>
+                    <a
                         href='#AboutMe'
-                        onClick={() => handlePageChange}
+                        onClick={() => handlePageChange("AboutMe")}
                         className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}>
-                    About Me
+                        About Me
                     </a>
-                </li>
-                <li className='nav-item'>
-                    <a 
+                </Button>
+                <Button>
+                    <a
                         href='#Contact'
-                        onClick={() => handlePageChange}
+                        onClick={() => handlePageChange("Contact")}
                         className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
-                    Contact
+                        Contact
                     </a>
-                </li>
-                <li className='nav-item'>
-                    <a 
+                </Button>
+                <Button>
+                    <a
                         href='#Portfolio'
-                        onClick={() => handlePageChange}
+                        onClick={() => handlePageChange("Portfolio")}
                         className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>
-                    Portfolio
+                        Portfolio
                     </a>
-                </li>
-                <li className='nav-item'>
-                    <a 
+                </Button>
+                <Button>
+                    <a
                         href='#Resume'
-                        onClick={() => handlePageChange}
+                        onClick={() => handlePageChange("Resume")}
                         className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>
-                    Resume
+                        Resume
                     </a>
-                </li>
-            </ul>
+                </Button>
+            </ButtonGroup>
         </div>
     );
 }
+
+
+
